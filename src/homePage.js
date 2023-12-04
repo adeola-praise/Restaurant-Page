@@ -1,4 +1,6 @@
 import "./styles.css";
+import headlineBurger from "./assets/images/burger.png";
+import logo from "./assets/images/logo.png";
 
 export default function createHomePage() {
   let content = document.getElementById("content");
@@ -13,6 +15,7 @@ export default function createHomePage() {
   headerSection.appendChild(logoDiv);
 
   let logoImg = document.createElement("img");
+  logoImg.src = logo;
   logoDiv.appendChild(logoImg);
   let logoText = document.createElement("h1");
   logoDiv.appendChild(logoText);
@@ -42,10 +45,10 @@ export default function createHomePage() {
     navLinks.appendChild(navItem);
   }
 
-  let orderBtnNav = document.createElement("button");
-  orderBtnNav.className = "order-btn";
-  orderBtnNav.innerHTML = "ORDER NOW";
-  navLinks.appendChild(orderBtnNav);
+  // let orderBtnNav = document.createElement("button");
+  // orderBtnNav.className = "order-btn";
+  // orderBtnNav.innerHTML = "ORDER NOW";
+  // navLinks.appendChild(orderBtnNav);
 
   /// HEADLINE SECTION OF THE WEBSITE ///
   let headlineSection = document.createElement("section");
@@ -71,9 +74,10 @@ export default function createHomePage() {
   headlineContent.appendChild(headlineBtn);
 
   let headlineImgDiv = document.createElement("div");
+  headlineImgDiv.className = "headline-img";
   headlineSection.appendChild(headlineImgDiv);
-  headlineImgDiv.className("headline-img");
 
   let headlineImg = document.createElement("img");
+  headlineImg.src = headlineBurger;
   headlineImgDiv.appendChild(headlineImg);
 }
