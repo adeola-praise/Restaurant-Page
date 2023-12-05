@@ -1,58 +1,45 @@
+import headerNav from "./headerNav.js";
+import { tabs } from "./headerNav.js";
+
 import homePage from "./homePage.js";
-// import "./styles.css";
+import menuPage from "./menu.js";
+import "./styles/styles.css";
 
-homePage();
+let menuContent = menuPage();
+let homePageContent = homePage();
 
-// alert("A restaurant page!");
+let previousPage;
 
-// let contentDiv = document.querySelector("#content");
+headerNav();
 
-// let buttonA = document.createElement("button");
-// let buttonB = document.createElement("button");
-// let buttonC = document.createElement("button");
+/// TAB SWITCHING LOGIC ///
+function displayPage(page) {
+  let content = document.querySelector("#content");
+  if (previousPage != null) {
+    content.removeChild(previousPage);
+  }
 
-// contentDiv.appendChild(buttonA);
-// contentDiv.appendChild(buttonB);
-// contentDiv.appendChild(buttonC);
+  content.appendChild(page);
+  document.body.appendChild(content);
 
-// buttonA.innerHTML = "Button A";
-// buttonB.innerHTML = "Button B";
-// buttonC.innerHTML = "Button C";
+  previousPage = page;
+}
 
-// let newDiv = document.createElement("h1");
-// contentDiv.appendChild(newDiv);
+displayPage(homePageContent);
 
-// buttonA.addEventListener("click", function () {
-//   console.log("home");
-//   homePage();
-// });
+console.log(tabs);
 
-// buttonB.addEventListener("click", function () {
-//   console.log("menu");
-//   newDiv.innerHTML = "menu";
-// });
+tabs.forEach((element) => {
+  element.addEventListener("click", function () {
+    switch (element.innerHTML) {
+      case "HOME":
+        displayPage(homePageContent);
+        break;
+      case "MENU":
+        displayPage(menuContent);
 
-// buttonC.addEventListener("click", function () {
-//   console.log("contact");
-//   newDiv.innerHTML = "contact";
-// });
-
-// let currentPage = "Home";
-
-// function showPage(page) {
-//   let previousPage = currentPage;
-//   currentPage = page;
-//   if (page == "Home") {
-//     contentDiv.appendChild();
-//   }
-// }
-
-// if (buttonA) {
-//   return homePage();
-// } else if (buttonB) {
-//   console.log("menu");
-// } else if (buttonC) {
-//   console.log("contact");
-// } else {
-//   return homePage();
-// }
+      default:
+        break;
+    }
+  });
+});
