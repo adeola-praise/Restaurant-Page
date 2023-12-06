@@ -3,10 +3,13 @@ import { tabs } from "./headerNav.js";
 
 import homePage from "./homePage.js";
 import menuPage from "./menu.js";
+import aboutPage from "./about.js";
+
 import "./styles/styles.css";
 
 let menuContent = menuPage();
 let homePageContent = homePage();
+let aboutPageContent = aboutPage();
 
 let previousPage;
 
@@ -37,7 +40,10 @@ tabs.forEach((element) => {
         break;
       case "MENU":
         displayPage(menuContent);
-
+        break;
+      case "ABOUT":
+        displayPage(aboutPageContent);
+        break;
       default:
         break;
     }

@@ -33,6 +33,7 @@ li {
   justify-content: space-between;
   align-items: center;
   padding-inline: 30px;
+  z-index: 100;
 }
 
 .logo {

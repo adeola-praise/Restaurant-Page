@@ -1,10 +1,10 @@
 import "./styles/menu.css";
 
-import barbequeChickenImg from "./assets/images/burgers/Barbeque-Chicken-Sandwich.png";
-import cheeseburgerImg from "./assets/images/burgers/png_burger_sandwich_10806.png";
-import veggieburgerImg from "./assets/images/burgers/png_burger_sandwich_10810.png";
-import steakhouseImg from "./assets/images/burgers/png_burger_sandwich_10807.png";
-import hamburgerImg from "./assets/images/burgers/Veggie-Burger-Tomato.png";
+import barbequeChickenImg from "./assets/images/burgers/burger3.png";
+import cheeseburgerImg from "./assets/images/burgers/burger1.png";
+import veggieburgerImg from "./assets/images/burgers/burger4.png";
+import steakhouseImg from "./assets/images/burgers/burger2.png";
+import hamburgerImg from "./assets/images/burgers/burger5.png";
 import bigkingImg from "./assets/images/burgers/Burger-Sandwich.png";
 
 export default function createMenuPage() {
@@ -17,18 +17,18 @@ export default function createMenuPage() {
 
   let burgerImages = [
     barbequeChickenImg,
-    cheeseburgerImg,
+    hamburgerImg,
     veggieburgerImg,
     steakhouseImg,
-    hamburgerImg,
+    cheeseburgerImg,
     bigkingImg,
   ];
   let burgerNames = [
     "Barbeque Chicken",
-    "Cheeseburger",
+    "Hamburger",
     "Veggie Burger",
     "Steakhouse",
-    "Hamburger",
+    "Cheeseburger",
     "Big King",
   ];
   let burgers = [];

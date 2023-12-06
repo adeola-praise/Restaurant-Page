@@ -27,7 +27,7 @@ export default function () {
   navLinks.className = "nav-links";
   headerNav.appendChild(navLinks);
 
-  let links = ["HOME", "MENU", "CONTACT", "SUPPORT"];
+  let links = ["HOME", "MENU", "ABOUT", "SUPPORT"];
 
   for (let i = 0; i < links.length; i++) {
     let navItem = document.createElement("li");

@@ -19,7 +19,7 @@ body {
   position: relative;
   width: 100%;
   isolation: isolate;
-  background-color: var(--secondary-color);
+  background-color: #f5ebdc;
   display: flex;
   flex-direction: column;
   align-items: center;

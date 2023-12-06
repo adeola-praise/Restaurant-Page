@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ec453c;
+  --secondary-color: #f5ebdc;
+  --tertiary-color: #19235d;
+  --font-color: #502314;
+}
+
+.about-content {
+  height: 90%;
+  line-height: 1.5;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 150px;
+  border-top: 2px solid var(--primary-color);
+}
+
+.restaurant-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  width: 50%;
+  height: 50%;
+}
+
+.info {
+  margin-left: 10px;
+}
+
+.info p {
+  margin-top: -20px;
+}
+
+.story {
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.story h2 {
+  font-size: 28px;
+}
+
+.story-content {
+  display: flex;
+}
+
+.story-content img {
+  width: 40%;
+  height: auto;
+  margin-right: 50px;
+}
+
+.story-content p {
+  text-align: justify;
+  line-height: 2;
+  font-weight: 500;
+}
